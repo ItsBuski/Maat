@@ -5,7 +5,6 @@ using UnityEngine.UIElements;
 
 public class PlayerDash : MonoBehaviour
 {
-    [SerializeField] float dashSpeed;
     [SerializeField] float dashDistance;
     [SerializeField] float timer;
     [SerializeField] float timerTime;

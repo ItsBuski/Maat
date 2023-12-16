@@ -26,11 +26,11 @@ public class PlayerStrongAttack : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-            OnAttack();
+            OnStrongAttack();
             Debug.Log("AttackStrong");
         }
     }
-    void OnAttack()
+    void OnStrongAttack()
     {
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         OnAttackEvent.Invoke();
