@@ -10,6 +10,7 @@ public class PlayerJump : MonoBehaviour
     [SerializeField] float offset;
     [SerializeField] bool OnGround;
     [SerializeField] bool DoubleJump;
+    public bool CanDoubleJump;
 
 
     [Header("Events")]
@@ -22,6 +23,7 @@ public class PlayerJump : MonoBehaviour
     }
     void Update()
     {
+        CanDoubleJump = true;
         Vector2 origin = new Vector2(transform.position.x, transform.position.y - offset);
         Vector2 target = new Vector2(transform.position.x, transform.position.y - offset - lineLength);
         Debug.DrawLine(origin, target, Color.black);
@@ -38,7 +40,7 @@ public class PlayerJump : MonoBehaviour
                 Jump();
                 Debug.Log("Jump");
             }
-            else if (!DoubleJump)
+            else if (CanDoubleJump && !DoubleJump)
             {
                 Jump();
                 DoubleJump = true;
