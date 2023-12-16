@@ -240,6 +240,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4199750546642270517, guid: 1b327f2e7441ec94383517671bf0a5a9, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ca0431ef401dbf742a56d9f293e98656, type: 2}
     - target: {fileID: 8905566274941892545, guid: 1b327f2e7441ec94383517671bf0a5a9, type: 3}
       propertyPath: m_BoundingShape2D
       value: 
@@ -1165,7 +1169,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3872710532948837293, guid: 748d55d29449c2b43bdf91da273d74e4, type: 3}
       propertyPath: orthographic size
-      value: 5
+      value: 6.55
       objectReference: {fileID: 0}
     - target: {fileID: 5553050873787122053, guid: 748d55d29449c2b43bdf91da273d74e4, type: 3}
       propertyPath: m_Name
@@ -1181,7 +1185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6147205462402146875, guid: 748d55d29449c2b43bdf91da273d74e4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: -2.880001
       objectReference: {fileID: 0}
     - target: {fileID: 6147205462402146875, guid: 748d55d29449c2b43bdf91da273d74e4, type: 3}
       propertyPath: m_LocalRotation.w
