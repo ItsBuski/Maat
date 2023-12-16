@@ -6,8 +6,8 @@ public class MostrarTextos : MonoBehaviour
 {
     public TextMeshProUGUI textoTMP;
     public string[] textos;
-    public float delayEntreTextos = 2f;
-    public float velocidadTexto = 0.4f;
+    public float delayEntreTextos;
+    public float velocidadTexto;
 
     void Start()
     {
