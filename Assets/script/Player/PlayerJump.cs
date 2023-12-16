@@ -39,15 +39,14 @@ public class PlayerJump : MonoBehaviour
                 Debug.Log("JumpDouble");
             }
 
-            }
         }
-        void Jump()
-        {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpForce);
-
-        }
-
-       
+    }
+    void Jump()
+    {
+        GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpForce);
 
     }
+
+
+
 }
