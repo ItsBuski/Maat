@@ -24,7 +24,7 @@ public class PlayerStrongAttack : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.X))
         {
             OnStrongAttack();
             Debug.Log("AttackStrong");

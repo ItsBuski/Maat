@@ -29,11 +29,13 @@ public class PlayerJump : MonoBehaviour
             if (OnGround)
             {
                 Jump();
+                Debug.Log("Jump");
             }
             else if (!DoubleJump)
             {
                 Jump();
                 DoubleJump = true;
+                Debug.Log("JumpDouble");
             }
         }
         void Jump()

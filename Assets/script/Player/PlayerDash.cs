@@ -18,9 +18,10 @@ public class PlayerDash : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.C))
         {
             Dash();
+            
         }
         
     }
@@ -30,11 +31,10 @@ public class PlayerDash : MonoBehaviour
         if (timer <= 0)
         {
             transform.position = transform.position + new Vector3(Input.GetAxisRaw("Horizontal") * dashDistance, 0, 0);
-
+            Debug.Log("Dash");
 
             timer = timerTime;
         }
-        else GetComponent<Rigidbody2D>().gravityScale = 1;
 
     }
 }
