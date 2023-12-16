@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 555880442398046875}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: attackPoint
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 629051838698037879}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 4572742159571628262}
   - component: {fileID: 8238521237195479556}
   - component: {fileID: 8920927681125921002}
+  - component: {fileID: 7679197814878069900}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -417,7 +418,19 @@ MonoBehaviour:
   health: 5
   OnHitEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7679197814878069900}
+        m_TargetAssemblyTypeName: KnockBack, Assembly-CSharp
+        m_MethodName: KnockBackEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDieEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -434,10 +447,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 555880442398046875}
-  attackRange: 0.5
+  attackRange: 1
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   OnAttackEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -470,7 +483,20 @@ MonoBehaviour:
   attackRange: 0.5
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   OnAttackEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7679197814878069900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3440241177719289067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66187c8b73625884393f93e4505e3bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KnockbackForce: 20

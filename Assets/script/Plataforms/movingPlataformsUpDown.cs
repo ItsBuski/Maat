@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class movingPlataforms : MonoBehaviour
+public class movingPlataformsUpDown : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] Rigidbody2D rb;
     [SerializeField] float distance; 
     Vector2 originalPosition; 
     bool rightMotion = true;
-
-    movingPlataformsUpDown UpDown;
 
     public void Start()
     {
@@ -32,4 +30,6 @@ public class movingPlataforms : MonoBehaviour
         }
         else if ((transform.position.x <= (originalPosition.x - distance)) && !rightMotion) rightMotion = true;
     }
+
+
 }
