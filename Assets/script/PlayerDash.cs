@@ -32,6 +32,7 @@ public class PlayerDash : MonoBehaviour
         {
             transform.position = transform.position + new Vector3(Input.GetAxisRaw("Horizontal") * dashDistance, 0, 0);
 
+
             timer = timerTime;
         }
         else GetComponent<Rigidbody2D>().gravityScale = 1;
