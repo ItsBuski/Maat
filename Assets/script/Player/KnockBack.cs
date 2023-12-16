@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class KnockBack : MonoBehaviour
 {
-    private  Rigidbody2D rigidbody2D;
+    private  Rigidbody2D rb2d;
 
     [Header("Knockback")]
     [SerializeField] float KnockbackForce = 50;
@@ -14,23 +14,24 @@ public class KnockBack : MonoBehaviour
 
     private void Awake()
     {
-        rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
+        rb2d = gameObject.GetComponent<Rigidbody2D>();
     }
 
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (rigidbody2D != null)
+        if (rb2d != null)
         {
             direction =  collision.transform.position - transform.position;
-            direction.y = .5f;
+            direction.y = .1f;
         }
     }
 
     public void KnockBackEffect()
     {
 
-            rigidbody2D.AddForce(direction.normalized * KnockbackForce, ForceMode2D.Impulse);
+            rb2d.AddForce(direction.normalized * KnockbackForce, ForceMode2D.Impulse);
+        Debug.Log("Knocback");
               
     }
 }

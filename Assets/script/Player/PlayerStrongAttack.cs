@@ -12,7 +12,7 @@ public class PlayerStrongAttack : MonoBehaviour
     [Header("Events")]
     [Space]
 
-    public UnityEvent OnAttackEvent;
+    public UnityEvent OnStrongAttackEvent;
 
     private void OnDrawGizmosSelected()
     {
@@ -27,13 +27,12 @@ public class PlayerStrongAttack : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X))
         {
             OnStrongAttack();
-            Debug.Log("AttackStrong");
         }
     }
     void OnStrongAttack()
     {
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-        OnAttackEvent.Invoke();
+        OnStrongAttackEvent.Invoke();
 
         foreach (Collider2D enemy in hitEnemies)
         {
