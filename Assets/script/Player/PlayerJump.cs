@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using static UnityEngine.UI.Image;
+using UnityEngine.Events;
 
 public class PlayerJump : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class PlayerJump : MonoBehaviour
     [SerializeField] bool OnGround;
     [SerializeField] bool DoubleJump;
 
+
+    [Header("Events")]
+    [Space]
+
+    public UnityEvent OnJumpEvent;
     void Start()
     {
 
@@ -44,7 +50,7 @@ public class PlayerJump : MonoBehaviour
     void Jump()
     {
         GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpForce);
-
+        OnJumpEvent.Invoke();
     }
 
 

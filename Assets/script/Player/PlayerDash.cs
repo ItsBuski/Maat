@@ -2,19 +2,19 @@ using System.Collections;
 
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.Events;
 
 public class PlayerDash : MonoBehaviour
 {
     [SerializeField] float dashDistance;
     [SerializeField] float timer;
     [SerializeField] float timerTime;
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
+    [Header("Events")]
+    [Space]
 
-    // Update is called once per frame
+    public UnityEvent OnDashEvent;
+
     void Update()
     {
         timer -= Time.deltaTime;
@@ -34,6 +34,7 @@ public class PlayerDash : MonoBehaviour
             Debug.Log("Dash");
 
             timer = timerTime;
+            OnDashEvent.Invoke();
         }
 
     }

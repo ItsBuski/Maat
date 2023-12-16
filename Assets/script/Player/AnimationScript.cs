@@ -9,12 +9,11 @@ public class AnimationScript : MonoBehaviour
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     private void Update()
     {
-        horizontalMovement = Mathf.Abs(Input.GetAxis("Horizontal"));
         animator.SetFloat("Speed", Mathf.Abs(horizontalMovement));
     }
     public void Idle()
@@ -25,7 +24,6 @@ public class AnimationScript : MonoBehaviour
     public void Jump()
     {
         animator.SetBool("jump", true);
-        animator.SetBool("Crouch", false);
     }
 
     public void Land()
@@ -33,16 +31,8 @@ public class AnimationScript : MonoBehaviour
         animator.SetBool("jump", false);
     }
 
-    public void Crouch()
-    {
-        animator.SetBool("Crouch", true);
-        animator.SetBool("idle", false);
-        animator.SetBool("jump", false);
-    }
-
     public void Stand()
     {
-        animator.SetBool("Crouch", false);
         animator.SetBool("idle", true);
         animator.SetBool("jump", false);
     }
@@ -53,25 +43,15 @@ public class AnimationScript : MonoBehaviour
             animator.SetTrigger("attack");
     }
 
+    public void Dash()
+    {
+        animator.SetTrigger("Dash");
+    }
+
     public void StrongAttack()
     {
         animator.SetBool("jump", false);
         animator.SetTrigger("strongAttack");
-    }
-
-    public void Victory()
-    {
-        animator.SetTrigger("Victory");
-    }
-
-    public void isClimbing()
-    {
-        animator.SetBool("isClimbing", true);
-    }
-
-    public void stopClimbing()
-    {
-        animator.SetBool("isClimbing", false);
     }
 
 }
