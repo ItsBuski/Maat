@@ -20,6 +20,7 @@ public class PlayerJump : MonoBehaviour
         Vector2 target = new Vector2(transform.position.x, transform.position.y - offset - lineLength);
         Debug.DrawLine(origin, target, Color.black);
         OnGround = Physics2D.Raycast(origin, Vector2.down, lineLength);
+        RaycastHit2D raycast = Physics2D.Raycast(origin, Vector2.down, lineLength);
         if (OnGround)
         {
             DoubleJump = false;
@@ -37,11 +38,16 @@ public class PlayerJump : MonoBehaviour
                 DoubleJump = true;
                 Debug.Log("JumpDouble");
             }
+
+            }
         }
         void Jump()
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpForce);
+
         }
+
+       
 
     }
 }
