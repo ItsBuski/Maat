@@ -20,7 +20,7 @@ public class PlataformDrop : MonoBehaviour
     private IEnumerator Fall()
     {
         yield return new WaitForSeconds(fallDelay);
-        rb.bodyType = RigidbodyType2D.Dynamic;
+        gameObject.SetActive(false);
         Destroy(gameObject, destroyDelay);
     }
 }
