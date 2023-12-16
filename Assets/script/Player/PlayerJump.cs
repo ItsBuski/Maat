@@ -16,10 +16,8 @@ public class PlayerJump : MonoBehaviour
     [Space]
 
     public UnityEvent OnJumpEvent;
-    void Start()
-    {
+    public UnityEvent OnFallEvent;
 
-    }
     void Update()
     {
         Vector2 origin = new Vector2(transform.position.x, transform.position.y - offset);
@@ -30,6 +28,7 @@ public class PlayerJump : MonoBehaviour
         if (OnGround)
         {
             DoubleJump = false;
+            OnFallEvent.Invoke();
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
