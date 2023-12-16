@@ -17,14 +17,15 @@ public class FlyingEnemy : MonoBehaviour
     {
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
 
-        if (distanceFromPlayer < 3)
+
+        if (distanceFromPlayer > 2)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
 
-        if (distanceFromPlayer > 3)
+        if (distanceFromPlayer > 15)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime * 2);
+            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime * 7);
         }
     }
 }

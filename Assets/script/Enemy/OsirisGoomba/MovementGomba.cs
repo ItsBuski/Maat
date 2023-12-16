@@ -18,7 +18,6 @@ public class MovementGomba : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(direction);
         direction = !direction;
     }
     void Update()
