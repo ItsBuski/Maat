@@ -319,6 +319,7 @@ GameObject:
   - component: {fileID: 498590295}
   - component: {fileID: 498590294}
   - component: {fileID: 498590299}
+  - component: {fileID: 498590300}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -352,7 +353,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &498590295
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -477,6 +478,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 10
+--- !u!114 &498590300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498590293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c0f28e198479044daab989449e50e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashDuration: 1
+  dashSpeed: 1
+  dashDistance: 3
+  isDashing: 0
+  timer: 0
+  timerTime: 1
 --- !u!1 &1067334853
 GameObject:
   m_ObjectHideFlags: 0

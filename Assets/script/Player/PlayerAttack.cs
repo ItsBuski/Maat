@@ -24,7 +24,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             OnAttack();
             Debug.Log("Attack");
