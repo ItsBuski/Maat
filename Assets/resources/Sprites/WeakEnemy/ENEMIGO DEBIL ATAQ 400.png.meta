@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2715859994d0e3249957329fd079e020
+guid: 23dfe8672cf7269429be3ab229e691ac
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CAMINAR ENEMIGO FUERTE 1_0
+      name: ENEMIGO DEBIL ATAQ 400_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 532
-        height: 400
+        width: 400
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc38e109307accf45882c633aa26e7b7
-      internalID: 1754013675
+      spriteID: 00189ef2cc7dc1041aeb02eb40be75e0
+      internalID: 845304669
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CAMINAR ENEMIGO FUERTE 1_1
+      name: ENEMIGO DEBIL ATAQ 400_1
       rect:
         serializedVersion: 2
-        x: 532
+        x: 400
         y: 0
-        width: 532
-        height: 400
+        width: 400
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c440dcfb76b30f843b484ab209d76ced
-      internalID: 411551052
+      spriteID: b2a3fd7f534ab8846915430f3aa08a02
+      internalID: 477529815
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CAMINAR ENEMIGO FUERTE 1_2
+      name: ENEMIGO DEBIL ATAQ 400_2
       rect:
         serializedVersion: 2
-        x: 1064
+        x: 800
         y: 0
-        width: 532
-        height: 400
+        width: 400
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96a84268d45a1d948964a523aca111dd
-      internalID: -1699852950
+      spriteID: aaca0c3a227701449b85d8b4b3cc6b34
+      internalID: 287682142
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CAMINAR ENEMIGO FUERTE 1_3
+      name: ENEMIGO DEBIL ATAQ 400_3
       rect:
         serializedVersion: 2
-        x: 1596
+        x: 1200
         y: 0
-        width: 532
-        height: 400
+        width: 400
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9df9aaf7f7f9a84fb9ded01b29d6cf3
-      internalID: -28904956
+      spriteID: 1e257fe54b6a4c649b959f093446bb1d
+      internalID: 573841103
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CAMINAR ENEMIGO FUERTE 1_4
+      name: ENEMIGO DEBIL ATAQ 400_4
       rect:
         serializedVersion: 2
-        x: 2128
+        x: 1600
         y: 0
-        width: 532
-        height: 400
+        width: 400
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7573470c1add2140a322d8560328aca
-      internalID: 402417195
+      spriteID: 4e1f1625f9f4537469577c44ecdcea83
+      internalID: -685555317
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CAMINAR ENEMIGO FUERTE 1_5
+      name: ENEMIGO DEBIL ATAQ 400_5
       rect:
         serializedVersion: 2
-        x: 2660
+        x: 2000
         y: 0
-        width: 532
-        height: 400
+        width: 400
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,71 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fcf58ac3fc029a4e9b99b6578b1c831
-      internalID: 339279173
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CAMINAR ENEMIGO FUERTE 1_6
-      rect:
-        serializedVersion: 2
-        x: 3192
-        y: 0
-        width: 532
-        height: 400
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f7b8d9431d95e12469603004eafe26ed
-      internalID: -477308014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CAMINAR ENEMIGO FUERTE 1_7
-      rect:
-        serializedVersion: 2
-        x: 3724
-        y: 0
-        width: 532
-        height: 400
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 76093958fc8380345bb444c7b9f9c313
-      internalID: -1289170682
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CAMINAR ENEMIGO FUERTE 1_8
-      rect:
-        serializedVersion: 2
-        x: 4256
-        y: 0
-        width: 532
-        height: 400
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d089f4fd8e1251643b72101e8a0afd4b
-      internalID: 1239687246
+      spriteID: cf4536c4387569744a00ebacf00a578f
+      internalID: 9679732
       vertices: []
       indices: 
       edges: []
@@ -322,15 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CAMINAR ENEMIGO FUERTE 1_0: 1754013675
-      CAMINAR ENEMIGO FUERTE 1_1: 411551052
-      CAMINAR ENEMIGO FUERTE 1_2: -1699852950
-      CAMINAR ENEMIGO FUERTE 1_3: -28904956
-      CAMINAR ENEMIGO FUERTE 1_4: 402417195
-      CAMINAR ENEMIGO FUERTE 1_5: 339279173
-      CAMINAR ENEMIGO FUERTE 1_6: -477308014
-      CAMINAR ENEMIGO FUERTE 1_7: -1289170682
-      CAMINAR ENEMIGO FUERTE 1_8: 1239687246
+      ENEMIGO DEBIL ATAQ 400_0: 845304669
+      ENEMIGO DEBIL ATAQ 400_1: 477529815
+      ENEMIGO DEBIL ATAQ 400_2: 287682142
+      ENEMIGO DEBIL ATAQ 400_3: 573841103
+      ENEMIGO DEBIL ATAQ 400_4: -685555317
+      ENEMIGO DEBIL ATAQ 400_5: 9679732
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
