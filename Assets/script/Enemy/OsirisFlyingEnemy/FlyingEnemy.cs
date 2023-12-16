@@ -22,7 +22,7 @@ public class FlyingEnemy : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
         }
 
-        if (distanceFromPlayer > 5)
+        if (distanceFromPlayer > 3)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime * 2);
         }
