@@ -17,7 +17,7 @@ public class StatesMachine : MonoBehaviour
         {
             random = Random.Range(0, playerScripts.Length); 
             if (playerScripts[random] is PlayerJump) {
-                CanDoubleJump.CanDoubleJump = false;
+                CanDoubleJump.enabled = false;
             }
             else
             {
