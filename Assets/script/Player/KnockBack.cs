@@ -30,8 +30,8 @@ public class KnockBack : MonoBehaviour
     public void KnockBackEffect()
     {
 
-            rb2d.AddForce(direction.normalized * KnockbackForce, ForceMode2D.Impulse);
-        Debug.Log("Knocback");
+            rb2d.AddForce(direction * KnockbackForce, ForceMode2D.Impulse);
+            Debug.Log("Knocback");
               
     }
 }
