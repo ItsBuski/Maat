@@ -36,8 +36,9 @@ public class PlayerStats : MonoBehaviour
     }
     public void TakeDamage (int Damage)
     {
-        OnHitEvent.Invoke();
+       
         health -= Damage;
+        OnHitEvent.Invoke();
 
         if (health <= 0)
         {
@@ -48,7 +49,8 @@ public class PlayerStats : MonoBehaviour
     public void DIE()
     {
         OnDieEvent.Invoke();
-        gameObject.SetActive(false);
+
+        Destroy(gameObject, .25f);
     }
 
     public int GetHealth()

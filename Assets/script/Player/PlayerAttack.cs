@@ -9,6 +9,9 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] float attackRange;
     [SerializeField] LayerMask enemyLayers;
 
+    [SerializeField] float maxTimer;
+    Vector3 newPosition;
+
     [Header("Events")]
     [Space]
 
