@@ -49,4 +49,8 @@ public class SceneManagement : MonoBehaviour
         SceneManager.LoadScene(gameOver);
     }
 
+    public void SetTrigger (string pointName) {
+        PlayerPrefs.SetString("Trigger", pointName);
+    }
+
 }

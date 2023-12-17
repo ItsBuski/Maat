@@ -25,7 +25,7 @@ public class FinishLine : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Collider2D[] playerCollider = Physics2D.OverlapCircleAll(finishPoint.position, finishRange, playerLayer);
-
+Debug.Log ("entered");
 
         foreach (Collider2D colision in playerCollider)
         {
