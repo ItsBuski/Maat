@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Escenarios/MainMenu.unity
+    guid: 4c41936a8674ec04689d514562e9d25c
+  - enabled: 1
     path: Assets/Escenarios/EscenaJuicio.unity
     guid: 077cae78949cb8242824f0e859ff77d6
   - enabled: 1
