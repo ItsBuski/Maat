@@ -50,7 +50,7 @@ public class PlayerStats : MonoBehaviour
     {
         OnDieEvent.Invoke();
 
-        Destroy(gameObject, .25f);
+        Destroy(gameObject, 1f);
     }
 
     public int GetHealth()
