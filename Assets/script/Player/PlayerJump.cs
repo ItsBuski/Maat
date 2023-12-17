@@ -5,11 +5,11 @@ using UnityEngine.Events;
 
 public class PlayerJump : MonoBehaviour
 {
-    [SerializeField] float JumpForce;
-    [SerializeField] float lineLength;
-    [SerializeField] float offset;
+    [SerializeField] float jumpForce;
     [SerializeField] bool OnGround;
     [SerializeField] bool DoubleJump;
+    [SerializeField] GroundCheck groundCheck;
+    [SerializeField] Rigidbody2D rb;
 
 
     [Header("Events")]
@@ -20,38 +20,25 @@ public class PlayerJump : MonoBehaviour
 
     void Update()
     {
-        Vector2 origin = new Vector2(transform.position.x, transform.position.y - offset);
-        Vector2 target = new Vector2(transform.position.x, transform.position.y - offset - lineLength);
-        Debug.DrawLine(origin, target, Color.black);
-        OnGround = Physics2D.Raycast(origin, Vector2.down, lineLength);
-        RaycastHit2D raycast = Physics2D.Raycast(origin, Vector2.down, lineLength);
-        if (OnGround)
+        if (groundCheck.isGrounded)
         {
-            DoubleJump = false;
-            OnFallEvent.Invoke();
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (OnGround)
+            DoubleJump = true;
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 Jump();
-                Debug.Log("Jump");
             }
-            else if (!DoubleJump)
-            {
-                Jump();
-                DoubleJump = true;
-                Debug.Log("JumpDouble");
+        } else {
+            if(Input.GetKeyDown(KeyCode.Space)) {
+                if(DoubleJump == true) {
+                    Jump();
+                    DoubleJump = false;
+                }
             }
-
         }
     }
     void Jump()
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, JumpForce);
+        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         OnJumpEvent.Invoke();
     }
-
-
-
 }
