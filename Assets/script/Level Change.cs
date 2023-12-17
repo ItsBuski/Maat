@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,31 +10,20 @@ public class LevelChange : MonoBehaviour
     [SerializeField] GameObject playerCutscene;
     [SerializeField] float transitiontime = 1f;
     public Animator transition;
-    // Start is called before the first frame update
-    void Start()
+   
+    void OnTriggerEnter2D()
     {
-        
+       //if (player.GetComponent<Collider2D>().CompareTag("Warp") || playerCutscene.GetComponent<Collider2D>().CompareTag("Warp"))
+        //{
+           // Debug.Log("enter");
+           //StartCoroutine( LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        //}
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-         
-    }
-    void OnTriggerEnter()
-    {
-        
-
-        if (player.GetComponent<Collider2D>().CompareTag("Warp") || playerCutscene.GetComponent<Collider2D>().CompareTag("Warp"))
-        {
-           StartCoroutine( LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
-        }
-    }
-    IEnumerator LoadLevel(int levelIndex) 
+    /*IEnumerator LoadLevel(int levelIndex) 
     {
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(transitiontime);
         SceneManager.LoadScene(levelIndex);
-    }
+    }*/
 }
 
