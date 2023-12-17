@@ -5,6 +5,7 @@ using UnityEngine;
 public class DamageDealer : MonoBehaviour
 {
     [SerializeField] int damage = 1;
+    [SerializeField] LayerMask masking;
 
     public int GetDamage()
     {
@@ -18,7 +19,9 @@ public class DamageDealer : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("damaged");
-        collision.gameObject.GetComponent<PlayerStats>().TakeDamage(1);
+            Debug.Log("damaged");
+            collision.gameObject.GetComponent<PlayerStats>().TakeDamage(damage);
+        
+
     }
 }
