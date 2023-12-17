@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenarios/EscenaNivel1.unity
     guid: 618fa8a2950c37c478a6e3a6329a10bd
+  - enabled: 1
+    path: Assets/Escenarios/EscenaNivel3.unity
+    guid: 334313f02d75dda4e9fb2054441160ae
+  - enabled: 1
+    path: Assets/Escenarios/EscenaNivel2.unity
+    guid: efbd5d54a8c1b284ca4499ade270c659
+  - enabled: 1
+    path: Assets/Escenarios/EscenaNivel4.unity
+    guid: f6d4f3e0c6bdec5439d0408ea9646ebb
   m_configObjects: {}
