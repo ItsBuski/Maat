@@ -48,7 +48,8 @@ public class PlayerStats : MonoBehaviour
     public void DIE()
     {
         OnDieEvent.Invoke();
-        gameObject.SetActive(false);
+
+        Destroy(gameObject, .25f);
     }
 
     public int GetHealth()
