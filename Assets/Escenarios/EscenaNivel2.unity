@@ -827,7 +827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cd584ac0a8ae474e851644cbc39b2ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: EscenaNivel2
+  sceneName: EscenaNivel1
   timer: 0
   transitiontime: 1
   transition: {fileID: 204385808}
@@ -2199,6 +2199,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 33798704}
+    - target: {fileID: 382405595678189982, guid: b96e83dccfd0a0b4d977a31f758e385d, type: 3}
+      propertyPath: A1Point
+      value: 
+      objectReference: {fileID: 462265877}
     - target: {fileID: 4721708326298560101, guid: b96e83dccfd0a0b4d977a31f758e385d, type: 3}
       propertyPath: m_Name
       value: PlayerManager
