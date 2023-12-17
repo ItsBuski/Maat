@@ -15,10 +15,10 @@ GameObject:
   - component: {fileID: 7836318495811434164}
   - component: {fileID: 7879105875919565459}
   - component: {fileID: 7887311309631867023}
-  - component: {fileID: 484997682271180007}
   - component: {fileID: 5748129905142894582}
   - component: {fileID: 4068822114964243868}
   - component: {fileID: 8996010850556248529}
+  - component: {fileID: 7141633076281737498}
   m_Layer: 6
   m_Name: goombaEnemy
   m_TagString: Untagged
@@ -242,7 +242,7 @@ MonoBehaviour:
   OnHitEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 484997682271180007}
+      - m_Target: {fileID: 7141633076281737498}
         m_TargetAssemblyTypeName: KnockBack, Assembly-CSharp
         m_MethodName: KnockBackEffect
         m_Mode: 1
@@ -257,19 +257,6 @@ MonoBehaviour:
   OnDieEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &484997682271180007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8163849064281614943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66187c8b73625884393f93e4505e3bfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  KnockbackForce: 5
 --- !u!114 &5748129905142894582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,3 +303,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7141633076281737498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8163849064281614943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66187c8b73625884393f93e4505e3bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KnockbackForce: 20
