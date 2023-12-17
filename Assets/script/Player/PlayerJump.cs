@@ -9,7 +9,7 @@ public class PlayerJump : MonoBehaviour
     [SerializeField] bool OnGround;
     [SerializeField] bool DoubleJump;
     [SerializeField] GroundCheck groundCheck;
-    [SerializeField] Rigidbody2D rb;
+    Rigidbody2D rb;
 
 
     [Header("Events")]
@@ -18,6 +18,10 @@ public class PlayerJump : MonoBehaviour
     public UnityEvent OnJumpEvent;
     public UnityEvent OnFallEvent;
 
+    private void Awake()
+    {
+        rb = gameObject.GetComponent<Rigidbody2D>();
+    }
     void Update()
     {
         if (groundCheck.isGrounded)

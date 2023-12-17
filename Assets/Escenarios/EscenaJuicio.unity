@@ -731,6 +731,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Warp
       objectReference: {fileID: 0}
+    - target: {fileID: 3748427309692671283, guid: ed5c133dc6c2efa4cb4af9c22db2c322, type: 3}
+      propertyPath: m_Size.x
+      value: 6.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 3748427309692671283, guid: ed5c133dc6c2efa4cb4af9c22db2c322, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4581822490271388800, guid: ed5c133dc6c2efa4cb4af9c22db2c322, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -745,7 +753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4581822490271388800, guid: ed5c133dc6c2efa4cb4af9c22db2c322, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.95
+      value: -6.48
       objectReference: {fileID: 0}
     - target: {fileID: 4581822490271388800, guid: ed5c133dc6c2efa4cb4af9c22db2c322, type: 3}
       propertyPath: m_LocalPosition.z
@@ -786,7 +794,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1502016051602669994, guid: ed5c133dc6c2efa4cb4af9c22db2c322, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1614362521}
+    - targetCorrespondingSourceObject: {fileID: 1502016051602669994, guid: ed5c133dc6c2efa4cb4af9c22db2c322, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1614362522}
   m_SourcePrefab: {fileID: 100100000, guid: ed5c133dc6c2efa4cb4af9c22db2c322, type: 3}
 --- !u!4 &541129181 stripped
 Transform:
@@ -803,10 +817,11 @@ GameObject:
   m_Component:
   - component: {fileID: 550054016}
   - component: {fileID: 550054017}
+  - component: {fileID: 550054018}
   m_Layer: 0
   m_Name: LevelLoader
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -840,6 +855,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 810990714}
   playerCutscene: {fileID: 697547658}
+  transitiontime: 1
+  transition: {fileID: 877609124}
+--- !u!114 &550054018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550054015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cd584ac0a8ae474e851644cbc39b2ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: EscenaTienda
+  timer: 0
   transitiontime: 1
   transition: {fileID: 877609124}
 --- !u!1001 &616488211
@@ -1005,7 +1036,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &697547659
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1129,7 +1160,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3872710532948837293, guid: 748d55d29449c2b43bdf91da273d74e4, type: 3}
       propertyPath: orthographic size
-      value: 12
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5553050873787122053, guid: 748d55d29449c2b43bdf91da273d74e4, type: 3}
       propertyPath: m_Name
@@ -1141,11 +1172,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6147205462402146875, guid: 748d55d29449c2b43bdf91da273d74e4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.01
+      value: 2.75
       objectReference: {fileID: 0}
     - target: {fileID: 6147205462402146875, guid: 748d55d29449c2b43bdf91da273d74e4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: -2.880001
       objectReference: {fileID: 0}
     - target: {fileID: 6147205462402146875, guid: 748d55d29449c2b43bdf91da273d74e4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1743,6 +1774,89 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1580795551}
   m_CullTransparentMesh: 1
+--- !u!1 &1614362517 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1502016051602669994, guid: ed5c133dc6c2efa4cb4af9c22db2c322, type: 3}
+  m_PrefabInstance: {fileID: 541129180}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1614362521
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614362517}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &1614362522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614362517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82d50f76031874242a4d9b981fd65f9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finishPoint: {fileID: 541129181}
+  finishRange: 5
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  finishLine: {fileID: 1614362522}
+  OnFinishEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 550054018}
+        m_TargetAssemblyTypeName: SceneManagement, Assembly-CSharp
+        m_MethodName: GoNextSceneWithTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1697990443 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5553050873787122053, guid: 748d55d29449c2b43bdf91da273d74e4, type: 3}
@@ -1885,7 +1999,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3440241177719289067, guid: 1b327f2e7441ec94383517671bf0a5a9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3483480362027132642, guid: 1b327f2e7441ec94383517671bf0a5a9, type: 3}
       propertyPath: m_LocalScale.x

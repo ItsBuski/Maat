@@ -251,6 +251,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: goombaEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8163849064281614943, guid: 4158f37fc9022fa40b49455608546b7f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 484997682271180007, guid: 4158f37fc9022fa40b49455608546b7f, type: 3}
     - {fileID: 4655868723558408831, guid: 4158f37fc9022fa40b49455608546b7f, type: 3}
@@ -607,6 +611,10 @@ PrefabInstance:
     - target: {fileID: 9155154784943040259, guid: c7953980db544774db2654f47aae2d9d, type: 3}
       propertyPath: m_Name
       value: flyingEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 9155154784943040259, guid: c7953980db544774db2654f47aae2d9d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
