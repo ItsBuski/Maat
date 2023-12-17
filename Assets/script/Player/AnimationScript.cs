@@ -25,30 +25,26 @@ public class AnimationScript : MonoBehaviour
 
     public void Jump()
     {
-        animator.SetBool("jump", true);
+        animator.SetTrigger("jump");
     }
 
     public void Fall()
     {
         animator.SetTrigger("fall");
-        animator.SetBool("jump", false);
     }
 
     public void Land()
     {
-        animator.SetBool("jump", false);
         animator.SetBool("idle", true);
     }
 
     public void Stand()
     {
         animator.SetBool("idle", true);
-        animator.SetBool("jump", false);
     }
 
     public void Attack()
     {
-            animator.SetBool("jump", false);
             animator.SetTrigger("attack");
     }
 
@@ -59,7 +55,6 @@ public class AnimationScript : MonoBehaviour
 
     public void StrongAttack()
     {
-        animator.SetBool("jump", false);
         animator.SetTrigger("strongAttack");
     }
 

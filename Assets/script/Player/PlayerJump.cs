@@ -11,6 +11,13 @@ public class PlayerJump : MonoBehaviour
     [SerializeField] GroundCheck groundCheck;
     Rigidbody2D rb;
 
+    [SerializeField] float timer = 0;
+    float delayBeforeLoad = 1.5f;
+
+    [SerializeField] float timerFall;
+    [SerializeField] float maxTimerFall;
+
+
 
     [Header("Events")]
     [Space]
@@ -24,25 +31,34 @@ public class PlayerJump : MonoBehaviour
     }
     void Update()
     {
+        
+
         if (groundCheck.isGrounded)
         {
             DoubleJump = true;
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 Jump();
+                OnFallEvent.Invoke();
             }
+
         } else {
             if(Input.GetKeyDown(KeyCode.Space)) {
                 if(DoubleJump == true) {
                     Jump();
                     DoubleJump = false;
+                    OnFallEvent.Invoke();
                 }
             }
         }
+
+        
     }
     void Jump()
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+
+        
         OnJumpEvent.Invoke();
     }
 }
