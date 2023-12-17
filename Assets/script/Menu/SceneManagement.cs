@@ -8,8 +8,10 @@ public class SceneManagement : MonoBehaviour
     [SerializeField] string sceneName;
     private string gameOver;
     [SerializeField] float timer = 0;
-    float delayBeforeLoad = 3f;
+    float delayBeforeLoad = 1.5f;
     bool startTimer = false;
+    [SerializeField] float transitiontime = 1f;
+    public Animator transition;
 
     private void Awake()
     {
@@ -32,6 +34,8 @@ public class SceneManagement : MonoBehaviour
     public void GoNextSceneWithTimer()
     {
         startTimer = true;
+        transition.SetTrigger("Start");
+
     }
 
     public void GoNextScene()
@@ -44,4 +48,5 @@ public class SceneManagement : MonoBehaviour
     {
         SceneManager.LoadScene(gameOver);
     }
+
 }
