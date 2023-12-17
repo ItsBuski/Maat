@@ -277,6 +277,7 @@ GameObject:
   - component: {fileID: 4199750546642270517}
   - component: {fileID: 1333985020214314376}
   - component: {fileID: 1888237109246261970}
+  - component: {fileID: 2723819584077455208}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -420,7 +421,9 @@ MonoBehaviour:
   OnGround: 0
   DoubleJump: 0
   groundCheck: {fileID: 1006814112013507559}
-  rb: {fileID: 6456494101773174354}
+  timer: 0
+  timerFall: 0
+  maxTimerFall: 0
   OnJumpEvent:
     m_PersistentCalls:
       m_Calls:
@@ -491,7 +494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1ac60a787ac454da909a31daab8960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
+  health: 0
   OnHitEvent:
     m_PersistentCalls:
       m_Calls:
@@ -509,7 +512,19 @@ MonoBehaviour:
         m_CallState: 2
   OnDieEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3440241177719289067}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4572742159571628262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -686,3 +701,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2723819584077455208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3440241177719289067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09682bd90c403014ea6ca8bae15c35e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOver: {fileID: 0}
