@@ -13,7 +13,12 @@ public class DamageDealer : MonoBehaviour
 
     public void Hit()
     {
-        
-        //gameObject.SetActive(false);
+
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("damaged");
+        collision.gameObject.GetComponent<PlayerStats>().TakeDamage(1);
     }
 }
