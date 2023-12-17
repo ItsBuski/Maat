@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8605831110833187824
+--- !u!1 &9155154784943040259
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,14 +8,14 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7665455239315913440}
-  - component: {fileID: 4797353828774102122}
-  - component: {fileID: 3037020422588896677}
-  - component: {fileID: 1600580799854949113}
-  - component: {fileID: 1706684456931858830}
-  - component: {fileID: 8694442250343920055}
-  - component: {fileID: 3719796673483480077}
-  - component: {fileID: 8145002466976145431}
+  - component: {fileID: 988525341488290405}
+  - component: {fileID: 1502000985540675351}
+  - component: {fileID: 676078140079564935}
+  - component: {fileID: 6213668556392550286}
+  - component: {fileID: 7631034017889067497}
+  - component: {fileID: 3175144407466732983}
+  - component: {fileID: 5417673086997310482}
+  - component: {fileID: 6637297747596691395}
   m_Layer: 6
   m_Name: flyingEnemy
   m_TagString: Untagged
@@ -23,13 +23,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7665455239315913440
+--- !u!4 &988525341488290405
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8605831110833187824}
+  m_GameObject: {fileID: 9155154784943040259}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.8383698, y: -0.77054507, z: 0}
@@ -38,13 +38,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4797353828774102122
+--- !u!212 &1502000985540675351
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8605831110833187824}
+  m_GameObject: {fileID: 9155154784943040259}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -90,48 +90,66 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3037020422588896677
+--- !u!114 &676078140079564935
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8605831110833187824}
+  m_GameObject: {fileID: 9155154784943040259}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 797e2d71961725a499c1a19b9c0c3e78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3.5
---- !u!114 &1600580799854949113
+  speed: 3
+--- !u!114 &6213668556392550286
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8605831110833187824}
+  m_GameObject: {fileID: 9155154784943040259}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66187c8b73625884393f93e4505e3bfe, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d1ac60a787ac454da909a31daab8960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KnockbackForce: 10
---- !u!50 &1706684456931858830
+  health: 5
+  OnHitEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6637297747596691395}
+        m_TargetAssemblyTypeName: FlyingKnockBack, Assembly-CSharp
+        m_MethodName: FlyingKnockBackEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDieEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!50 &7631034017889067497
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8605831110833187824}
-  m_BodyType: 0
+  m_GameObject: {fileID: 9155154784943040259}
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -141,15 +159,15 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &8694442250343920055
+--- !u!58 &3175144407466732983
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8605831110833187824}
+  m_GameObject: {fileID: 9155154784943040259}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -178,47 +196,52 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &3719796673483480077
+--- !u!58 &5417673086997310482
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9155154784943040259}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!114 &6637297747596691395
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8605831110833187824}
+  m_GameObject: {fileID: 9155154784943040259}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d1ac60a787ac454da909a31daab8960, type: 3}
+  m_Script: {fileID: 11500000, guid: b1b8b43bf494123449952d03f7369f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
-  OnHitEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1600580799854949113}
-        m_TargetAssemblyTypeName: KnockBack, Assembly-CSharp
-        m_MethodName: KnockBackEffect
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnDieEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &8145002466976145431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8605831110833187824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eeeb2afa09fcd1145bcba3805215bd8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
+  maxTimer: 0
+  floorEnemy: 0
