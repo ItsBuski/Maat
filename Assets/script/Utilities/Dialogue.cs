@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using TMPro;
 
 public class Dialogue : MonoBehaviour
@@ -8,6 +9,8 @@ public class Dialogue : MonoBehaviour
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
+
+    public UnityEvent dialogueEnd;
 
     private int index;
     // Start is called before the first frame update
@@ -59,6 +62,8 @@ public class Dialogue : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
+            dialogueEnd.Invoke();
+
         }
     }
 }
