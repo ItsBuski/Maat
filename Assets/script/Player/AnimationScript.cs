@@ -14,11 +14,13 @@ public class AnimationScript : MonoBehaviour
 
     private void Update()
     {
+        horizontalMovement = Mathf.Abs(Input.GetAxis("Horizontal"));
         animator.SetFloat("Speed", Mathf.Abs(horizontalMovement));
+
     }
     public void Idle()
     {
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMovement));
+        animator.SetBool("idle", true);
     }
 
     public void Jump()
@@ -26,9 +28,16 @@ public class AnimationScript : MonoBehaviour
         animator.SetBool("jump", true);
     }
 
+    public void Fall()
+    {
+        animator.SetTrigger("fall");
+        animator.SetBool("jump", false);
+    }
+
     public void Land()
     {
         animator.SetBool("jump", false);
+        animator.SetBool("idle", true);
     }
 
     public void Stand()
@@ -45,7 +54,7 @@ public class AnimationScript : MonoBehaviour
 
     public void Dash()
     {
-        animator.SetTrigger("Dash");
+        animator.SetTrigger("dash");
     }
 
     public void StrongAttack()
